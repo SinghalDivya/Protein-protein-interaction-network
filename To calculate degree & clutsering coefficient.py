@@ -1,7 +1,6 @@
 
 # coding: utf-8
-
-
+#import the required packages
 import networkx as nx
 import matplotlib.pyplot as plt
 import math
@@ -17,26 +16,22 @@ print ("Nodes: ", N)
 print ("Edges: ", K)
 print ("Average degree: ", avg_deg)
 
-#clustering of each node
+#calculation of clustering of each node
 nx.clustering(hartford)
 
-#degree
+#to calculate degree
 nx.degree(hartford)
-
 
 # check if the data has been read properly or not.
 nx.info(hartford) 
 
-# average clustering coefficient
-
+#To compute average clustering coefficient
 nx . average_clustering ( hartford)
 
-# degree_distribution
+#To calcualte degree_distribution
 
 T=nx.degree_histogram(hartford)
 print(T)
-
-
 
 if len(T) < 15:
  print ("Degree Fequency List:")
