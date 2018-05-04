@@ -1,3 +1,11 @@
+#////////////////////////////////////////////////////////////////////////////////////////////////////
+#/// \file Protein-protein-interaction-network.py
+#/// \brief A python program built to calculate the degree and clustering coefficient for every node
+#///        in the human protein interaction network and also to calculate the shortest path lengths
+#///        between every pair of proteins.
+#///
+#//  Author: Divya Singhal
+#////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # coding: utf-8
 #import the required packages
@@ -26,19 +34,18 @@ nx.degree(hartford)
 nx.info(hartford) 
 
 #To compute average clustering coefficient
-nx . average_clustering ( hartford)
+nx.average_clustering ( hartford)
 
 #To calcualte degree_distribution
-
-T=nx.degree_histogram(hartford)
+distribuation_Table=nx.degree_histogram(hartford)
 print(T)
 
-if len(T) < 15:
+if len(distribuation_Table) < 15:
  print ("Degree Fequency List:")
  print ("Degree : # of Nodes")
  
 # print the degree and number of nodes that have that degree
-for degree,number_of_nodes in enumerate(T):
+for degree,number_of_nodes in enumerate(distribuation_Table):
    print ("%i : %i" % (degree,number_of_nodes))
 else:
  print ("Degree Frequency List Too Long to Print")
@@ -46,7 +53,7 @@ else:
 # generate x,y values for degree dist. scatterplot
 x_list = []
 y_list = []
-for degree,num_of_nodes in enumerate(T):
+for degree,num_of_nodes in enumerate(distribuation_Table):
      if num_of_nodes > 0:
         x_list.append(degree)
         y_list.append(num_of_nodes)
