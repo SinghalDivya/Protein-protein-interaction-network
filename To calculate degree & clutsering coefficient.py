@@ -1,8 +1,7 @@
 #////////////////////////////////////////////////////////////////////////////////////////////////////
-#/// \file Protein-protein-interaction-network.py
+#/// \file To calculate degree & clustering Coefficient.py
 #/// \brief A python program built to calculate the degree and clustering coefficient for every node
-#///        in the human protein interaction network and also to calculate the shortest path lengths
-#///        between every pair of proteins.
+#///        in the human protein interaction network.
 #///
 #//  Author: Divya Singhal
 #////////////////////////////////////////////////////////////////////////////////////////////////////
